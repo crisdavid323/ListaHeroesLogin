@@ -21,7 +21,7 @@ const rutas: Routes = [
         component: AgregarComponent
       },
       {
-        path: 'editar/:id',
+        path: 'edit/:id',
         component: AgregarComponent
       },
       {
@@ -34,7 +34,7 @@ const rutas: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'listado'
+        redirectTo: 'list'
       },
 
     ]

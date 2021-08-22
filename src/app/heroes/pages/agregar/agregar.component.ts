@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from '../../services/heroes.service';
+import { Heroe } from '../../interfaces/heroes.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-agregar',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarComponent implements OnInit {
 
-  constructor() { }
+  heroe!: Heroe;
+
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private heroesService: HeroesService
+  ) { }
 
   ngOnInit(): void {
+         
+    this.activateRoute.params.subscribe(console.log);
+   
+
+    // this.heroesService.getHeroe(this.heroe.id).subscribe( resp => {
+    //   console.log(resp);
+      
+    // })
   }
 
 }
